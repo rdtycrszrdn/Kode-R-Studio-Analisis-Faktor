@@ -1,0 +1,22 @@
+---
+title: "Analisis Faktor"
+author: "Arditya Criszardin"
+date: "2023-05-01"
+output: html_document
+---
+
+```{r}
+# Memasang paket "psych" jika belum terpasang
+# install.packages("psych")
+
+# Memuat data
+my_data <- read.csv("my_data.csv")
+
+# Melakukan analisis faktor dengan menggunakan paket "psych"
+library(psych)
+my_factor <- fa(my_data, nfactors = 3, rotate = "varimax")
+
+# Menampilkan hasil analisis faktor
+print(my_factor)
+```
+
